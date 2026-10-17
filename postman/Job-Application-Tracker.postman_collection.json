@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "Job Application Tracker",
+    "description": "Basic requests for the local API Gateway at http://localhost:8080",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List applications",
+      "request": { "method": "GET", "url": "http://localhost:8080/api/applications" }
+    },
+    {
+      "name": "Create application",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"companyName\": \"HCLTech\",\n  \"jobTitle\": \"Fresher Backend Engineer\",\n  \"jobUrl\": \"https://example.com/job\",\n  \"status\": \"APPLIED\",\n  \"notes\": \"Sample record\"\n}"
+        },
+        "url": "http://localhost:8080/api/applications"
+      }
+    },
+    {
+      "name": "List users",
+      "request": { "method": "GET", "url": "http://localhost:8080/api/users" }
+    }
+  ]
+}
